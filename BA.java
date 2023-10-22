@@ -98,8 +98,15 @@ public class BA extends JFrame {
 		PE.setBounds(88, 170, 109, 23);
 		contentPane.add(PE);
 		
-		JButton AREA = new JButton("Area circulo");
-		AREA.setBounds(88, 211, 132, 23);
+		JButton AREA = new JButton("Calcular Area de un circulo");
+		AREA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			AreaCirculo newframe = new AreaCirculo();
+			newframe.setVisible(true);
+			
+			}
+		});
+		AREA.setBounds(88, 211, 200, 23);
 		contentPane.add(AREA);
 		
 	}

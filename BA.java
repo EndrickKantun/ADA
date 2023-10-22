@@ -62,7 +62,7 @@ public class BA extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("ALTURA");
-		lblNewLabel_1.setBounds(10, 75, 46, 14);
+		lblNewLabel_1.setBounds(10, 75, 66, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JButton AreaCR = new JButton("Area cuadrado y rectangulo");
@@ -75,18 +75,31 @@ public class BA extends JFrame {
 		JOptionPane.showMessageDialog(AreaCR,"El Area del cuadrado es " + RE +" EL Area del rectangulo es " + R);
 			}	});
 	
-		AreaCR.setBounds(88, 135, 182, 23);
+		AreaCR.setBounds(88, 135, 216, 23);
 		contentPane.add(AreaCR);
 			
 		
 		
 	
 		JButton PE = new JButton("perimetro ");
-		PE.setBounds(88, 170, 89, 23);
+		PE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				  int lad = Integer.parseInt(ba.getText());
+				  int periCua = 4 * lad;
+		            int bas = Integer.parseInt(ba.getText());
+		            int alt = Integer.parseInt(al.getText());
+		            int periRect = 2 * (bas + alt);
+
+		            JOptionPane.showMessageDialog(null, "Perímetro del Cuadrado: " + periCua +
+		                    "\nPerímetro del Rectángulo: " + periRect);
+		        
+			}
+		});
+		PE.setBounds(88, 170, 109, 23);
 		contentPane.add(PE);
 		
 		JButton AREA = new JButton("Area circulo");
-		AREA.setBounds(88, 211, 89, 23);
+		AREA.setBounds(88, 211, 132, 23);
 		contentPane.add(AREA);
 		
 	}

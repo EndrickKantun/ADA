@@ -99,6 +99,12 @@ public class BA extends JFrame {
 		contentPane.add(PE);
 		
 		JButton AREA = new JButton("Area circulo");
+		AREA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AreaCirculo newframe = new AreaCirculo();
+				newframe.setVisible(true);
+			}
+		});
 		AREA.setBounds(88, 211, 132, 23);
 		contentPane.add(AREA);
 		
